@@ -1,0 +1,18 @@
+body {
+  font-family: 'Century Gothic';
+}
+
+.logo {
+  height: 150px;
+}
+
+.subtitle {
+  font-family: 'Century Gothic';
+  font-size: x-large;
+  color:black;
+}
+
+.featuredHouse {
+  border-radius: 2px;
+  background-color: rgb(0, 0, 0);
+}
