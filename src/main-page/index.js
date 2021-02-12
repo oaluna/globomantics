@@ -52,14 +52,15 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <AppPresentation country={this.state.country} 
         filteredHouses={this.state.filteredHouses} 
         featuredHouse={this.state.featuredHouse}
         countries={this.state.countries} filterHouses={this.filterHouses} 
         activeHouse={this.state.activeHouse} setActiveHouse={this.setActiveHouse} />
+        </BrowserRouter>
     )
   }
 }
 
 export default App;
-

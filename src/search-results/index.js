@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SearchResultsRow from './search-results-row';
 
 const SearchResults = (props) => {
-  const houseRows = props.filteredHouses.map(h => 
+  const houseRows = props.filteredHouses.map(h =>
     <SearchResultsRow key={h.id.toString()} house={h} setActiveHouse={props.setActiveHouse} />);
   return (
     <div className="mt-2" >

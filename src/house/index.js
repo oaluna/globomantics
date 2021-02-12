@@ -40,7 +40,7 @@ class House extends Component {
               alt='inquiry'
               onClick={this.inquiryToggle}
             />
-            <p className="font-weight-bolder align-center float-right mr-5 pr-5">Click here to enquire about this house.</p>
+            <p className="font-weight float-right mr-5 pr-5">Click here to enquire about this house.</p>
             {inquiry}
           </div>
         </div>

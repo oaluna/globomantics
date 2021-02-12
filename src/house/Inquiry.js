@@ -65,7 +65,7 @@ class Inquiry extends Component {
           />
         </div>
         <button
-          className="btn btn-primary"
+          className="btn btn-info"
           disabled={this.state.name.length === 0 || this.state.email.length === 0}
           onClick={this.onSubmit}
         >

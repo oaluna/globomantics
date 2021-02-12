@@ -14,8 +14,8 @@ class HouseFilter extends Component {
 
     return (
       <div className="form-group row mt-3">
-        <div className="offset-md-2 col-md-4">
-          Look for your dream house in country:
+        <div className="font-weight-bold mt-1 offset-md-2 col-md-4">
+          <h5>Look for your dream house in your country:</h5>
         </div>
         <div className="col-md-4">
           <select className="form-control" value={search} onChange={this.onSearchChange}>

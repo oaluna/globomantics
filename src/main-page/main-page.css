@@ -1,15 +1,18 @@
 body {
-  font-family: 'Century Gothic';
+  font-family: 'Montserrat', sans-serif;
 }
+
+
 
 .logo {
   height: 150px;
+  color:  #11222a;
 }
 
 .subtitle {
-  font-family: 'Century Gothic';
+  font-family: 'Montserrat', sans-serif;
   font-size: x-large;
-  color:black;
+  color: #11222a;
 }
 
 .featuredHouse {
