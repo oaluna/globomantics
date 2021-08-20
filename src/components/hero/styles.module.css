@@ -1,0 +1,16 @@
+.hero {
+  background-image: url('../../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  color: white;
+}
+.logo {
+  background-image: url('../../images/GloboLogo.png');
+}
+
+@media screen and (min-width: 992px) {
+  .miniHero {
+    background-position-y: -150px;
+  }
+}

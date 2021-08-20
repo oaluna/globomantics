@@ -1,0 +1,9 @@
+.price {
+  font-size: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 32vw;
+}

@@ -1,8 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './main-page';
-import registerServiceWorker from './registerServiceWorker';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import React from 'react'
+import { render } from 'react-dom'
+import { Router } from '@reach/router'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import Home from './pages/Home'
+import Details from './pages/Details'
+import NotFound from './pages/NotFound'
+
+if (module.hot) {
+  module.hot.accept()
+}
+
+render(
+  <Router>
+    <Home path="/" />
+    <Details path="/details/:propertyId" />
+    <NotFound default />
+  </Router>,
+  document.getElementById('root')
+)
