@@ -33,7 +33,7 @@ class Filter extends React.Component {
 
   render() {
     const containerClasses = classnames('container', 'mb-1', styles.container)
-    const formClasses = classnames('form-horizontal', styles.form)
+    const formClasses = classnames('form', styles.form)
     const { priceFrom, postcode, sortOrder, sortOrders } = this.state
     const { postcodes, count, updateFilter } = this.props
 
@@ -62,8 +62,8 @@ class Filter extends React.Component {
                 Clear
               </button>
             </p>
-            <div className="columns text-center">
-              <div className="column col-4 col-xs-12">
+            <div className="filters">
+              <div className="column col-3 col-xs-12">
                 <div className="form-group">
                   <div className="col-3 col-sm-12">
                     <label className="form-label" htmlFor="price-from">

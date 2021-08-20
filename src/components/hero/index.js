@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './styles.module.css'
+import GlobomanticsLogo from "../../images/GlobomanticsLogo.png";
 
 function Hero({ miniHero }) {
   const classes = classnames(styles.hero, 'hero', 'my-2', {
@@ -10,13 +11,14 @@ function Hero({ miniHero }) {
   })
 
   return (
+    <div>
     <div className={classes}>
       <div className="hero-body text-center text-light">
-     <img src="../../images/GloboLogo.png" className={styles.logo} alt="logo"/>
-       <h1>Globomantics</h1>
-        <h6>by Oscar Armando Luna</h6>
+         <img src={GlobomanticsLogo} alt='Globomantics Logo' style={{width: '400px', left: 0, top: 0}} />
         <p className="mb-0">Bringing premium property right to your finger tips</p>
       </div>
+    </div>
+    <div className="hero-overlay"></div>
     </div>
   )
 }

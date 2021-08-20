@@ -11,12 +11,11 @@ function Listing({ listing }) {
   }
 
   const { id, image, title, address, description, price } = listing
-  const columnClasses = classnames('column', 'col-4', 'col-xs-12', styles.column)
-  const cardClasses = classnames('card', styles.card)
 
   return (
-    <div className={columnClasses}>
-      <div className={cardClasses}>
+    <div className="row">
+    <div className={styles.column}>
+      <div className={styles.card}>
         <div className="card-image">
           <img className="img-responsive" src={`/server/${image}`} alt={address} />
         </div>
@@ -35,6 +34,7 @@ function Listing({ listing }) {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   )
 }
