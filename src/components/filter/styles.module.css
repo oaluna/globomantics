@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   padding: 15px;
-  max-width: 30vw;
+  max-width: 35%;
   flex-wrap: nowrap;
   display: flex;
   justify-content: center;
@@ -14,22 +14,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  
 }
 
 .form > p {
   display: flex;
   flex-direction: column;
+  width: 10vw;
+  margin: 0 25px;
 
 }
 
 .filters {
   display: flex;
-  margin: 25px 0px;
+  margin: 0 25px;
   padding: 0px 15px;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
-  align-content: center;
-  
+  align-content: space-between;
 
 }

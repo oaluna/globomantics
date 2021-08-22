@@ -70,7 +70,7 @@ class Filter extends React.Component {
                       Price from
                     </label>
                   </div>
-                  <div className="col-9 col-sm-12">
+                  <div className="col-md-9 col-sm-12">
                     <input
                       className="form-input"
                       min="0"

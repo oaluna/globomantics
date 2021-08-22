@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import classnames from 'classnames'
 
 import { asCurrency } from '../../utils/number'
 import styles from './styles.module.css'
@@ -13,29 +12,36 @@ function Listing({ listing }) {
   const { id, image, title, address, description, price } = listing
 
   return (
-    <div className="row">
-    <div className={styles.column}>
-      <div className={styles.card}>
-        <div className="card-image">
-          <img className="img-responsive" src={`/server/${image}`} alt={address} />
-        </div>
-        <div className="card-header">
-          <div className="card-title h5">{title}</div>
-          <div className="card-title h6">
-            &pound;
-            {asCurrency(price)}
-          </div>
-          <div className="card-subtitle text-gray">{address}</div>
-        </div>
-        <div className="card-body">{description}</div>
-        <div className="card-footer">
-          <Link className="btn btn-primary" to={`/details/${id}`}>
-            Go to property
-          </Link>
-        </div>
-      </div>
+    
+    <div className="table-container">
+      <table className="table table-responsive table-striped border-none">
+    
+        
+        <tr>
+          <td className="d-table-cell card-image">
+            <img className="img-responsive" src={`/server/${image}`} alt={address} />
+          </td>
+          <td className="title d-table-cell">
+            
+              <h3>{title}</h3>
+              <h3> &pound;{asCurrency(price)}</h3>
+           
+           
+              <h6>{address}</h6>
+            
+          </td>
+          <td className="description d-table-cell">
+            <p>{description}</p>
+          </td>
+          <td className="actions d-table-cell">
+            <Link to={`/details/${id}`}>
+              <button className="btn btn-primary">Go to property</button>
+            </Link>
+          </td>
+      </tr>
+      </table>
     </div>
-    </div>
+    
   )
 }
 
