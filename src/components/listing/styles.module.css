@@ -30,7 +30,7 @@ tr .card {
 
 td.title {
   text-align: left;
-  width: 25vw;
+  width: 20vw;
   margin-left: 45px;
   padding: 0px 25px;
 }
@@ -44,15 +44,32 @@ td.img-responsive {
 
 td.description {
   max-width: 20vw;
-  margin: 0px 25px;
+  margin: 0px 45px 0px 0px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
 }
 
 td.actions button {
-  width: 10vw;
-  margin: 0px 45px;
+  max-width:15vw;
+  width: 100%;
+  margin-left: 100px;
+  margin-right: auto;
   padding:0 25px;
   text-align:center;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 70px;
+  border-radius: 50px;
+  font-size: 20px;
+  background-color: indigo;
+  color: white;
+  border: 0px transparent;
+  box-shadow: 0px 2px 4px black;
+}
+
+td.actions a {
+  
+  text-decoration: none;
 }

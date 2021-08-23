@@ -1,9 +1,27 @@
 .price {
-  font-size: 20px;
+  font-size: 32px;
+  line-height: 1;
+  margin-top: 0px;
+  text-align: right;
 }
 
 .container {
   margin: 0 auto;
   padding: 15px;
-  max-width: 32vw;
+  max-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.detail-container {
+  height: 650px;
+}
+.detail-row {
+  margin-left: 27vw;
+  margin-top: -55vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 17px;
 }
