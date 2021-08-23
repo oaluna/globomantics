@@ -16,6 +16,7 @@ function Hero({ miniHero }) {
     <div>
       <div className={classes}>
         <div className="hero-body text-center">
+          <div className="hero-overlay" style={{position: "absolute", zIndex: 0, left: 0, top: 0, padding: 0, width: "100%", height: "100%"}}></div>
           <img
           className="globomantics-logo"
             src={GlobomanticsLogo}
@@ -27,12 +28,13 @@ function Hero({ miniHero }) {
               display: "flex",
               flexDirection: "column",
               flexWrap: "wrap",
+              zIndex: 10
             }}
           />
-          <h2 className="m-2 header-tagline">{headlineString}</h2>
+          <h2 className="m-2 header-tagline" style={{zIndex: 10}}>{headlineString}</h2>
         </div>
       </div>
-      <div className="hero-overlay"></div>
+      
     </div>
   );
 }
