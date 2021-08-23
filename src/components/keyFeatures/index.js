@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.module.css";
+import "./styles.module.css";
 function KeyFeatures({ features }) {
   return (
     <React.Fragment>

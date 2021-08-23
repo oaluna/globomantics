@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./styles.module.css";
+import  "./styles.module.css";
 
 function replaceAll(target, search, replacement) {
   return target.replace(new RegExp(search, 'g'), replacement)
