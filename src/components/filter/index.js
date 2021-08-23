@@ -40,7 +40,7 @@ class Filter extends React.Component {
     return (
       <aside className="mt-2">
         <div className={containerClasses}>
-          <h2 data-cy="property-count">
+          <h2 className="property-count" data-cy="property-count">
             {`${count} private ${getPropertiesDisplayText(count)} for sale`}
           </h2>
           <form
@@ -52,7 +52,7 @@ class Filter extends React.Component {
               Refine your results
               <button
                 data-cy="clear-button"
-                className="ml-1 btn btn-sm"
+                className="clear-button ml-1"
                 type="button"
                 onClick={() => {
                   this.setState(Object.assign({}, DefaultState))

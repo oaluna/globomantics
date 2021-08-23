@@ -10,8 +10,7 @@ function KeyFeatures({ features }) {
             <li key={feature}>
               <h5>{feature}</h5>
             </li>
-          ))
-          }
+          ))}
         </ul>
       </div>
     </React.Fragment>

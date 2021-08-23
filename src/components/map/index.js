@@ -1,13 +1,13 @@
-import React from 'react'
-import  "./styles.module.css";
+import React from "react";
+import "./styles.module.css";
 
 function replaceAll(target, search, replacement) {
-  return target.replace(new RegExp(search, 'g'), replacement)
+  return target.replace(new RegExp(search, "g"), replacement);
 }
 
 function Map({ address }) {
-  const replaced = replaceAll(address, ' ', '%20')
-  const search = `https://maps.google.com/maps?q=${replaced}&t=&z=16&ie=UTF8&iwloc=&output=embed`
+  const replaced = replaceAll(address, " ", "%20");
+  const search = `https://maps.google.com/maps?q=${replaced}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
 
   return (
     <div className="mapouter">
@@ -25,7 +25,7 @@ function Map({ address }) {
         />
       </div>
     </div>
-  )
+  );
 }
 
-export default Map
+export default Map;

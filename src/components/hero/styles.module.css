@@ -14,7 +14,7 @@
 }
 
 .hero-overlay {
-  backgound: rgba(75, 75, 75, 0.6);
+  background: rgba(75, 75, 75, 0.6);
   position: relative;
   background-blend-mode: brightness(0.5);
   z-index: 10;
@@ -36,6 +36,18 @@
   font-weight: 500;
   display: flex;
   text-align: left;
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    height: 50%;
+  }
+  .hero-body h2 {
+    display: none;
+  }
+  .globomantics-logo {
+    margin: 0 auto;
+  }
 }
 
 

@@ -17,6 +17,7 @@ function Hero({ miniHero }) {
       <div className={classes}>
         <div className="hero-body text-center">
           <img
+          className="globomantics-logo"
             src={GlobomanticsLogo}
             alt="Globomantics Logo"
             style={{
