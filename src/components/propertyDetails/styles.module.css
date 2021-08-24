@@ -25,3 +25,18 @@
   flex-wrap: wrap;
   font-size: 17px;
 }
+
+@media screen and (min-width: 375px) and (max-width: 540px) {
+  .container {
+    width: 90vw;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    
+  }
+
+  .detail-row {
+    margin-top: 10vh;
+    
+  }
+}

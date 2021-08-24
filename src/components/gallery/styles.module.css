@@ -5,3 +5,19 @@
 .img-responsive {
     width: 100%;
 }
+
+@media screen and (min-width: 375px) and (max-width: 540px) {
+    .img-responsive {
+        width: 100vw;
+    }
+    label.figure-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+    }
+    
+
+    
+}

@@ -21,7 +21,7 @@ function PropertyDetails({ listing }) {
     <React.Fragment>
       <div className={styles.container}>
         <div className="row">
-          <div className="column col-9 col-xs-12">
+          <div className="col-md-9 col-xs-8 w-75">
             <h2>{title}</h2>
             <h3 className="text-dark text-small">{description}</h3>
               <small>Priced from</small>
