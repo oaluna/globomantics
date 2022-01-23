@@ -1,16 +1,17 @@
 .hero {
-  background-image: url('../../images/hero.jpg');
+  background-image: url("../../images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
   background-size: cover;
-  height: 60vh;
+  backdrop-filter: brightness(0.75);
+  height: 80vh;
   color: white;
-  margin: 0px;
-  position:relative;
-  padding: 15px;
+  padding: 45px;
+  margin: 25px;
+  position: relative;
   z-index: 20;
-
+  border-radius: 50px;
 }
 
 .hero-overlay {
@@ -20,35 +21,47 @@
   z-index: 10;
   width: 100%;
   height: 100%;
+  border-radius: 50px;
 }
 
 .hero-body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.hero-body h2 {
-  line-height: 0.5;
-  color: azure;
-  font-weight: 500;
-  display: flex;
   text-align: left;
 }
 
-@media screen and (min-width: 375px) and (max-width: 540px) {
+.hero-body h2 {
+  line-height: 1;
+  font-size: 80px;
+  color: lightgrey;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 15%;
+  width: 50%;
+}
+
+@media screen and (min-width: 319px) and (max-width: 540px) {
   .hero {
-    height: 50%;
-  }
-  .hero-body h2 {
-    display: none;
+    width: 100%;
+
+    padding: 5px;
+    margin: 0;
   }
   .globomantics-logo {
     margin: 0 auto;
   }
+  h2.header-tagline {
+    width: 100%;
+    font-size: 50px;
+    padding: 25px;
+  }
 }
-
+@media screen and (min-width: 541px) and (max-width: 991px) {
+  .hero-body h2 {
+    width: 100%;
+  }
+  h2.header-tagline {
+    font-size: 68px;
+  }
+}
 
 @media screen and (min-width: 992px) {
   .miniHero {

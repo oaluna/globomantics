@@ -1,40 +1,54 @@
 .container {
   margin: 0 auto;
   padding: 15px;
-  max-width: 35%;
+  max-width: 45%;
   flex-wrap: nowrap;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-
 }
 
 .form {
+  width: 40vw;
   display: flex;
+  color: lightgray;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-
+  position: absolute;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.06) 84%
+  );
+  border-radius: 25px;
+  box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  top: -27vh;
+  left: -36vw;
+  z-index: 20;
 }
 
-.form>p {
+.form > p {
   display: flex;
   flex-direction: column;
+  padding: 15px;
   width: 10vw;
-  margin: 0 25px;
-
+  margin: 0;
 }
 
 button.clear-button {
-
   padding: 0 20px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 25px;
+  padding: 15px;
   height: 70px;
+  width: 175px;
   border-radius: 50px;
   font-size: 20px;
   background-color: gray;
@@ -45,39 +59,42 @@ button.clear-button {
 
 .filters {
   display: flex;
-  margin: 0 25px;
+  margin: 0 25px 0 0;
   padding: 0px 15px;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   align-content: space-between;
-
 }
 
-
-
-@media only screen and (min-width: 375px) and (max-width: 540px) {
+@media only screen and (min-width: 319px) and (max-width: 540px) {
   .property-count {
     display: flex;
-    margin: 0 15px;
+    margin: 65vh 15px 0 15px;
     padding: 0;
-    width: 90vw;
+    position: relative;
     text-align: center;
   }
 
   .form {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    flex-wrap: nowrap;
-    margin: 0 15px;
+    width: 65vw;
+    margin-left: 78vw;
+    margin-top: -53vh;
+    flex-direction: row;
+    color: black;
+    text-align: center;
+    position: relative;
   }
 
-  .form>p {
+  .form > p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50vw;
+    width: 100%;
+  }
+  .filters {
+    flex-direction: column;
+    margin: 15px auto;
   }
 
   button.clear-button {
@@ -85,7 +102,10 @@ button.clear-button {
     flex-direction: row;
     justify-content: center;
     float: left;
-    margin: 15px 0;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
     padding: 0;
     text-align: center;
   }

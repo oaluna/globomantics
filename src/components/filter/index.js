@@ -1,41 +1,41 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import classnames from 'classnames'
+import React from "react";
+import classnames from "classnames";
 
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
 function getSortOrderValue(sortOrder) {
-  return sortOrder.replace(' ', '').toLowerCase()
+  return sortOrder.replace(" ", "").toLowerCase();
 }
 
 function getPropertiesDisplayText(count) {
   if (count > 1 || count === 0) {
-    return 'properties'
+    return "properties";
   }
-  return 'property'
+  return "property";
 }
 
 const DefaultState = {
-  priceFrom: '',
-  postcode: '',
-  sortOrder: '',
-  sortOrders: ['Highest First', 'Lowest First']
-}
+  priceFrom: "",
+  postcode: "",
+  sortOrder: "",
+  sortOrders: ["Highest First", "Lowest First"]
+};
 
 class Filter extends React.Component {
-  state = Object.assign({}, DefaultState)
+  state = Object.assign({}, DefaultState);
 
   handleChange = (prop, value) => {
     this.setState({
       [prop]: value
-    })
-  }
+    });
+  };
 
   render() {
-    const containerClasses = classnames('container', 'mb-1', styles.container)
-    const formClasses = classnames('form', styles.form)
-    const { priceFrom, postcode, sortOrder, sortOrders } = this.state
-    const { postcodes, count, updateFilter } = this.props
+    const containerClasses = classnames("container", "mb-1", styles.container);
+    const formClasses = classnames("form", styles.form);
+    const { priceFrom, postcode, sortOrder, sortOrders } = this.state;
+    const { postcodes, count, updateFilter } = this.props;
 
     return (
       <aside className="mt-2">
@@ -48,20 +48,7 @@ class Filter extends React.Component {
             className={formClasses}
             noValidate
           >
-            <p className="mb-1">
-              Refine your results
-              <button
-                data-cy="clear-button"
-                className="clear-button ml-1"
-                type="button"
-                onClick={() => {
-                  this.setState(Object.assign({}, DefaultState))
-                  updateFilter({})
-                }}
-              >
-                Clear
-              </button>
-            </p>
+            <h2 className="m-0 d-flex-row">Find your dream home</h2>
             <div className="filters">
               <div className="column col-3 col-xs-12">
                 <div className="form-group">
@@ -79,14 +66,17 @@ class Filter extends React.Component {
                       id="price-from"
                       placeholder="£1,000,000"
                       value={priceFrom}
-                      onChange={event =>
-                        this.handleChange('priceFrom', Number(event.target.value))
+                      onChange={(event) =>
+                        this.handleChange(
+                          "priceFrom",
+                          Number(event.target.value)
+                        )
                       }
                     />
                   </div>
                 </div>
               </div>
-              <div className="column col-4 col-xs-12">
+              <div className="column col-6 col-xs-12">
                 <div className="form-group">
                   <div className="col-3 col-sm-12">
                     <label className="form-label" htmlFor="postcode">
@@ -98,12 +88,12 @@ class Filter extends React.Component {
                       className="form-select"
                       id="postcode"
                       value={postcode}
-                      onChange={event =>
-                        this.handleChange('postcode', event.target.value)
+                      onChange={(event) =>
+                        this.handleChange("postcode", event.target.value)
                       }
                     >
                       <option value="">Choose...</option>
-                      {postcodes.map(pc => (
+                      {postcodes.map((pc) => (
                         <option value={pc.toLowerCase()}>{pc}</option>
                       ))}
                     </select>
@@ -122,24 +112,40 @@ class Filter extends React.Component {
                       className="form-select"
                       id="sortorder"
                       value={sortOrder}
-                      onChange={event =>
-                        this.handleChange('sortOrder', event.target.value)
+                      onChange={(event) =>
+                        this.handleChange("sortOrder", event.target.value)
                       }
                     >
                       <option value="">Choose...</option>
-                      {sortOrders.map(order => (
-                        <option value={getSortOrderValue(order)}>{order}</option>
+                      {sortOrders.map((order) => (
+                        <option value={getSortOrderValue(order)}>
+                          {order}
+                        </option>
                       ))}
                     </select>
                   </div>
                 </div>
               </div>
+              <div className="col-9 col-sm-12">
+                <button
+                  style={{ float: "right" }}
+                  data-cy="clear-button"
+                  className="clear-button ml-5"
+                  type="button"
+                  onClick={() => {
+                    this.setState(Object.assign({}, DefaultState));
+                    updateFilter({});
+                  }}
+                >
+                  Clear
+                </button>
+              </div>
             </div>
           </form>
         </div>
       </aside>
-    )
+    );
   }
 }
 
-export default Filter
+export default Filter;

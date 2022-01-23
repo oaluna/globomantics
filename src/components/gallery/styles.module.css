@@ -1,23 +1,23 @@
 .figure {
-    width: 70vw;
+  width: 70vw;
 }
 
 .img-responsive {
-    width: 100%;
+  width: 100%;
 }
 
-@media screen and (min-width: 375px) and (max-width: 540px) {
-    .img-responsive {
-        width: 100vw;
-    }
-    label.figure-caption {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 100vw;
-    }
-    
-
-    
+@media screen and (min-width: 319px) and (max-width: 540px) {
+  .img-responsive {
+    width: 95vw;
+    position: relative;
+  }
+  label.figure-caption {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    z-index: 20;
+  }
 }
